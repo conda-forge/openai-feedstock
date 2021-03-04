@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f514098dece360dcee8fe1b33eed876955af7f2e3028362a54f00f8522b71408
+  sha256: 1942817c2964369f3fbf4be675cf63ec1f3d7e25fd4b6ddb7fc2deb076d3fd2a
 
 build:
-  number: 2
-  skip: true   # [py==30 or py==31 or py==32 or py==33 or py<27]
+  number: 0
+  skip: true  # [py==30 or py==31 or py==32 or py==33 or py<27]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
