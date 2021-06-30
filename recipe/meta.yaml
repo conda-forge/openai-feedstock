@@ -23,6 +23,9 @@ requirements:
     - pip
     - python
   run:
+    - openpyxl >=3.0.7
+    - pandas >=1.2.3
+    - pandas-stubs >=1.1.0.11
     - python
     - requests >=2.20
     - tqdm
