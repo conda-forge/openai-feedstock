@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d71c0fc1b5f3df0f41875f40c8449a96fd6e55775c601ffc206f5b72ae4cad57
+  sha256: 767517e48e6085e1932723e61abd54096f2b6f255eba64c7268b238a7dec1475
 
 build:
   number: 0
@@ -29,6 +29,8 @@ requirements:
     - python
     - requests >=2.20
     - tqdm
+    - colorama
+    # Because of some error with tqdm. Should be checked again some time down the road.
 
 test:
   imports:
