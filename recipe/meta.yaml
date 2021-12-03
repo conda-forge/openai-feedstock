@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d3e7fecd728e70fa9ca3484a00ea3f7b928b172207c6017816419d57f2b3b596
+  sha256: 6b69b52de7d563ca2e086141aeecb2d1df091bc079f30f1e5c913c3400389bed
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
