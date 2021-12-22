@@ -14,23 +14,20 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<37]
+  noarch: python
   entry_points:
     - openai=openai._openai_scripts:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.7
   run:
     - openpyxl >=3.0.7
     - pandas >=1.2.3
     - pandas-stubs >=1.1.0.11
-    - python
+    - python >=3.7
     - requests >=2.20
     - tqdm
     - colorama
