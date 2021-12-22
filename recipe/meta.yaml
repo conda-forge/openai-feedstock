@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.11.4" %}
+{% set version = "0.11.5" %}
 
 
 package:
@@ -8,25 +8,26 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f515d596f86b80be6a96630d6379edef82e0752397f60ddff73af53bf972e8d1
+  sha256: 52922247d2db56052591844745bcc842043cd888d173c8e1d783cad3352e9123
+  patches:
+    - add-entry_points.patch
 
 build:
   number: 0
-  skip: true  # [py<37]
+  noarch: python
+  entry_points:
+    - openai=openai._openai_scripts:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - pip
-    - python
+    - python >=3.7
   run:
     - openpyxl >=3.0.7
     - pandas >=1.2.3
     - pandas-stubs >=1.1.0.11
-    - python
+    - python >=3.7
     - requests >=2.20
     - tqdm
     - colorama
