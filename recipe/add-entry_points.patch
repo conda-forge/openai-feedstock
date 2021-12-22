@@ -1,0 +1,32 @@
+From b9761cc414272fb0922e9bf112a7b0962f651695 Mon Sep 17 00:00:00 2001
+From: BastianZim <10774221+BastianZim@users.noreply.github.com>
+Date: Wed, 8 Dec 2021 17:44:10 +0100
+Subject: [PATCH] Add entry_points
+
+---
+ bin/openai => openai/_openai_scripts.py | 0
+ setup.py                                | 6 +++++-
+ 2 files changed, 5 insertions(+), 1 deletion(-)
+ rename bin/openai => openai/_openai_scripts.py (100%)
+
+diff --git a/bin/openai b/openai/_openai_scripts.py
+similarity index 100%
+rename from bin/openai
+rename to openai/_openai_scripts.py
+diff --git a/setup.py b/setup.py
+index deeb740..a90ee90 100644
+--- a/setup.py
++++ b/setup.py
+@@ -22,7 +22,11 @@
+     ],
+     extras_require={"dev": ["black~=21.6b0", "pytest==6.*"]},
+     python_requires=">=3.7.1",
+-    scripts=["bin/openai"],
++    entry_points={
++        'console_scripts': [
++            'openai=openai._openai_scripts:main',
++        ],
++    },
+     packages=find_packages(exclude=["tests", "tests.*"]),
+     package_data={
+         "openai": [

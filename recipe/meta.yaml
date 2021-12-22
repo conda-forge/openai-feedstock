@@ -9,6 +9,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 52922247d2db56052591844745bcc842043cd888d173c8e1d783cad3352e9123
+  patches:
+    - add-entry_points.patch
 
 build:
   number: 0
