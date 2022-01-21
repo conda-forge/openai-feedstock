@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.11.5" %}
+{% set version = "0.11.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 52922247d2db56052591844745bcc842043cd888d173c8e1d783cad3352e9123
+  sha256: d367ce1a1087295936693b045c392e369bbfba90e6e7882515dbcdb06aebc8da
   patches:
     - add-entry_points.patch
 
