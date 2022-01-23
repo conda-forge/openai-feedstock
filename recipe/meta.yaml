@@ -40,10 +40,12 @@ test:
   commands:
     - openai api -h
     - pip check
-    - pytest
+    - pytest openai/tests
   requires:
     - pip
     - pytest
+  source_files:
+    - openai/tests
 
 about:
   home: https://beta.openai.com
