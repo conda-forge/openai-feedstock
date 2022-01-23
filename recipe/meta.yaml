@@ -40,13 +40,8 @@ test:
   commands:
     - openai api -h
     - pip check
-    - pytest openai/tests
   requires:
     - pip
-    - pytest
-    - pytest-mock
-  source_files:
-    - openai/tests
 
 about:
   home: https://beta.openai.com
