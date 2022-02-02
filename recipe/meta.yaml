@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1c3841220b3f749989140f5db9f5ec78afb62562f60e09da413ffcfb8b7fdb3d
+  sha256: a47515633a365e8d27fae27c4b8df54e0a5fb7c2a238fdc7936ea92a63d7961b
   patches:
     - 0001-Add-entry_points.patch
 
