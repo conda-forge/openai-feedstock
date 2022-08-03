@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.20.0" %}
+{% set version = "0.22.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 65ece56e2321c8e8804009c0ef775274a8a5c65ae3603d87a506cda16923812c
+  sha256: 6a4e82eef1897be5377086064caa465dbc9bf1b345a93816f766384818727fb0
 
 build:
   number: 0
@@ -22,6 +22,7 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - numpy >=1.22.0
     - openpyxl >=3.0.7
     - pandas >=1.2.3
     - pandas-stubs >=1.1.0.11
