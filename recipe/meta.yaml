@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.25.0" %}
+{% set version = "0.26.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 422a42368b0264ebcd9914e0b38004b2c441a69ea7f3a059d6afe84b770f8553
+  sha256: 1c7ecbc17c5a63cc1ce86db84193e8390ebf58c0ccacac4999e3dd20b561bc5f
 
 build:
   number: 0
@@ -22,16 +22,20 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - typing_extensions
-    - numpy
-    - openpyxl >=3.0.7
-    - pandas >=1.2.3
-    - pandas-stubs >=1.1.0.11
+    - aiohttp
     - python >=3.7
     - requests >=2.20
     - tqdm
     - colorama
     # Because of some error with tqdm. Should be checked again some time down the road.
+    # Extra stuff
+    - typing_extensions
+    - numpy
+    - pandas >=1.2.3
+    - pandas-stubs >=1.1.0.11
+    - openpyxl >=3.0.7
+    - wandb
+    
 
 test:
   imports:
