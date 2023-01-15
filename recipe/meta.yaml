@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.7.1
   run:
     - aiohttp
-    - python >=3.7
+    - python >=3.7.1
     - requests >=2.20
     - tqdm
     - colorama
@@ -35,6 +35,11 @@ requirements:
     - pandas-stubs >=1.1.0.11
     - openpyxl >=3.0.7
     - wandb
+    - scikit-learn >=1.0.2
+    - tenacity >=8.0.1
+    - matplotlib-base
+    - sklearn
+    - plotly
 
 
 test:
