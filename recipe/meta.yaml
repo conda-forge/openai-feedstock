@@ -38,7 +38,6 @@ requirements:
     - scikit-learn >=1.0.2
     - tenacity >=8.0.1
     - matplotlib-base
-    - sklearn
     - plotly
 
 
