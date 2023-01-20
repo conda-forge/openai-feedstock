@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.26.0" %}
+{% set version = "0.26.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1c7ecbc17c5a63cc1ce86db84193e8390ebf58c0ccacac4999e3dd20b561bc5f
+  sha256: 66783baf4b876b58d84f4c7d343d05694b61fc10f06397d39677eb1883c27dd7
 
 build:
   number: 0
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.7.1
   run:
     - aiohttp
-    - python >=3.7
+    - python >=3.7.1
     - requests >=2.20
     - tqdm
     - colorama
@@ -35,7 +35,11 @@ requirements:
     - pandas-stubs >=1.1.0.11
     - openpyxl >=3.0.7
     - wandb
-    
+    - scikit-learn >=1.0.2
+    - tenacity >=8.0.1
+    - matplotlib-base
+    - plotly
+
 
 test:
   imports:
