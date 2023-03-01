@@ -28,6 +28,18 @@ requirements:
     - tqdm
     - colorama
     - typing_extensions
+    # datalib
+    - numpy
+    - pandas >=1.2.3
+    - pandas-stubs >=1.1.0.11
+    - openpyxl >=3.0.7
+    - wandb
+    - openpyxl >=3.0.7
+    - scikit-learn >=1.0.2
+    - tenacity >=8.0.1
+    - matplotlib-base
+    - plotly
+    - scipy
 
 test:
   imports:
