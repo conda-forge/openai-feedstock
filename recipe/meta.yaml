@@ -27,19 +27,7 @@ requirements:
     - requests >=2.20
     - tqdm
     - colorama
-    # Because of some error with tqdm. Should be checked again some time down the road.
-    # Extra stuff
     - typing_extensions
-    - numpy
-    - pandas >=1.2.3
-    - pandas-stubs >=1.1.0.11
-    - openpyxl >=3.0.7
-    - wandb
-    - scikit-learn >=1.0.2
-    - tenacity >=8.0.1
-    - matplotlib-base
-    - plotly
-
 
 test:
   imports:
