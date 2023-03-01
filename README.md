@@ -1,11 +1,11 @@
-About openai
-============
+About openai-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openai-feedstock/blob/main/LICENSE.txt)
 
 Home: https://beta.openai.com
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openai-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python client library for the OpenAI API
 
