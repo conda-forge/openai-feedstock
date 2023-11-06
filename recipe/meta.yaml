@@ -57,7 +57,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  doc_url: https://beta.openai.com/docs/api-reference?lang=python
+  doc_url: https://platform.openai.com/docs/api-reference?lang=python
   dev_url: https://github.com/openai/openai-python
 
 extra:
