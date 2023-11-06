@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.28.1" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6f4e0a244cec994c064695ea5d66625623327a942582ff67e885346dc997b4da
+  sha256: c3e73bc58a677d93fd465da11c332b780508586fdf0ff804a5f8e855a6c80104
 
 build:
   number: 0
@@ -22,10 +22,15 @@ requirements:
     - pip
     - python >=3.7.1
   run:
+    - anyio >=3.5.0,<4
+    - distro >=1.7.0,<2
+    - httpx >=0.23.0,<1
+    - pydantic >=1.9.0,<3
+    - typing-extensions >=4.5,<5
     - aiohttp
     - python >=3.7.1
     - requests >=2.20
-    - tqdm
+    - tqdm >4
     - colorama
     - typing_extensions
     # datalib
