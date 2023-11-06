@@ -34,7 +34,6 @@ requirements:
 test:
   imports:
     - openai
-    - openai.api_resources
   commands:
     - openai api -h
     - pip check
