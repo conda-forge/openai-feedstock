@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "0.28.1" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,43 +8,32 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6f4e0a244cec994c064695ea5d66625623327a942582ff67e885346dc997b4da
+  sha256: 21bd4c66b05db536414b7395e7dded99c3dc9d679459dfdbf743f02be333f93b
 
 build:
   number: 0
   noarch: python
   entry_points:
-    - openai=openai._openai_scripts:main
+    - openai=openai.cli:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    -  hatchling
     - pip
     - python >=3.7.1
   run:
-    - aiohttp
+    - anyio >=3.5.0,<4
+    - distro >=1.7.0,<2
+    - httpx >=0.23.0,<1
+    - pydantic >=1.9.0,<3
+    - typing-extensions >=4.5,<5
     - python >=3.7.1
-    - requests >=2.20
-    - tqdm
-    - colorama
-    - typing_extensions
-    # datalib
-    - numpy
-    - pandas >=1.2.3
-    - pandas-stubs >=1.1.0.11
-    - openpyxl >=3.0.7
-    - wandb
-    - openpyxl >=3.0.7
-    - scikit-learn >=1.0.2
-    - tenacity >=8.0.1
-    - matplotlib-base
-    - plotly
-    - scipy
+    - tqdm >4
 
 test:
   imports:
     - openai
-    - openai.api_resources
   commands:
     - openai api -h
     - pip check
@@ -67,7 +56,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  doc_url: https://beta.openai.com/docs/api-reference?lang=python
+  doc_url: https://platform.openai.com/docs/api-reference?lang=python
   dev_url: https://github.com/openai/openai-python
 
 extra:
