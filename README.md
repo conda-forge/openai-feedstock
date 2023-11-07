@@ -11,7 +11,7 @@ Summary: Python client library for the OpenAI API
 
 Development: https://github.com/openai/openai-python
 
-Documentation: https://beta.openai.com/docs/api-reference?lang=python
+Documentation: https://platform.openai.com/docs/api-reference?lang=python
 
 The OpenAI Python library provides convenient access to the OpenAI API
 from applications written in the Python language.
