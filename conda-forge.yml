@@ -4,5 +4,6 @@ github:
   tooling_branch_name: main
 bot:
   inspection: update-grayskull
+  automerge: true
 conda_build:
   pkg_format: '2'
