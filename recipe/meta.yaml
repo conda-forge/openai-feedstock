@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "1.14.0" %}
+{% set version = "1.14.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 260cd60aa616205f8e91c31260c21f29a250f72cd63a942df877042c35c3ef51
+  sha256: a8f059b1f4a06f2f33e6f8c13cd95bfd8893752b08cc5ca4fdf5f8ad83dfb1f8
 
 build:
   number: 0
