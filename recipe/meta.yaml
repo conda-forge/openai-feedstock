@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - hatchling
+    - hatch-fancy-pypi-readme
     - pip
     - python >=3.7.1
   run:
