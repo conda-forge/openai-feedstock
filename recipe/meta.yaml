@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "1.14.3" %}
+{% set version = "1.15.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: f9acead581edd4ae9a79e1425ff9ba36b35da13237abebca7cc6581c164ce4c9
+  sha256: da2167ef90e1de89a79d1641f2f802cc35d61dd831ffc8f3bd36260acd17a1b1
 
 build:
   number: 0
@@ -20,6 +20,7 @@ build:
 requirements:
   host:
     - hatchling
+    - hatch-fancy-pypi-readme
     - pip
     - python >=3.7.1
   run:
