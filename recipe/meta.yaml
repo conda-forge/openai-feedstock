@@ -22,7 +22,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }}
     - aiohttp
     - requests >=2.20
     - tqdm
