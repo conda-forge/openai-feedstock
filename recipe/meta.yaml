@@ -11,7 +11,7 @@ source:
   sha256: 6f4e0a244cec994c064695ea5d66625623327a942582ff67e885346dc997b4da
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - openai=openai._openai_scripts:main
@@ -19,27 +19,15 @@ build:
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.7.1
+    - setuptools
   run:
+    - python >={{ python_min }}
     - aiohttp
-    - python >=3.7.1
     - requests >=2.20
     - tqdm
-    - colorama
     - typing_extensions
-    # datalib
-    - numpy
-    - pandas >=1.2.3
-    - pandas-stubs >=1.1.0.11
-    - openpyxl >=3.0.7
-    - wandb
-    - openpyxl >=3.0.7
-    - scikit-learn >=1.0.2
-    - tenacity >=8.0.1
-    - matplotlib-base
-    - plotly
-    - scipy
 
 test:
   imports:
@@ -50,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://beta.openai.com
