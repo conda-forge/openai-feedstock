@@ -11,7 +11,7 @@ source:
   sha256: 64b8cc5b8fac71ed0f2b2df4d775b0dd48bf3f8e1c18be4c74be71ea10f44d7e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - openai=openai.cli:main
@@ -22,7 +22,7 @@ requirements:
     - hatchling
     - hatch-fancy-pypi-readme
     - pip
-    - python >=3.7.1
+    - python {{ python_min }}
   run:
     - typing_extensions >=4.11,<5
     - jiter >=0.4.0,<1
@@ -32,7 +32,7 @@ requirements:
     - httpx >=0.23.0,<1
     - pydantic >=1.9.0,<3
     - typing-extensions >=4.11,<5
-    - python >=3.7.1
+    - python >={{ python_min }}
     - tqdm >4
 
 test:
@@ -43,6 +43,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://beta.openai.com
