@@ -19,14 +19,13 @@ build:
 
 requirements:
   host:
-    - hatchling
+    - hatchling ==1.26.3
     - hatch-fancy-pypi-readme
     - pip
     - python {{ python_min }}
   run:
     - numpy >=2.0.2
     - python-sounddevice >=0.5.1
-    - typing_extensions >=4.11,<5
     - jiter >=0.4.0,<1
     - sniffio
     - anyio >=3.5.0,<5
