@@ -159,4 +159,5 @@ Feedstock Maintainers
 =====================
 
 * [@BastianZim](https://github.com/BastianZim/)
+* [@timkpaine](https://github.com/timkpaine/)
 
