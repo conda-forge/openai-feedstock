@@ -1,5 +1,5 @@
 {% set name = "openai" %}
-{% set version = "2.26.0" %}
+{% set version = "2.29.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: aa3480144ab99c503fb18c6654964edb9594733d37c04ef56a017ada68e05765
+  sha256: bd18b2438ec32b4ee6007e10e23516ad8ea008f7e3c2ca623e7208710dede148
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
-    - typing_extensions >=4.11,<5
+    - typing_extensions >=4.14,<5
     - jiter >=0.10.0,<1
     - sniffio
     - anyio >=3.5.0,<5
