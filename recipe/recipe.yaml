@@ -1,26 +1,28 @@
-{% set name = "openai" %}
-{% set version = "3.6.0" %}
+schema_version: 1
 
+context:
+  name: openai
+  version: "3.6.0"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/openai/openai-python/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/openai/openai-python/archive/refs/tags/v${{ version }}.tar.gz
   sha256: adc462adfe22635106ba4af58e99872341c355ea8a27a026e576b34f6e9ee6b8
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - hatchling
     - hatch-fancy-pypi-readme
     - pip
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
   run:
     - httpx2 >=2.7.0,<3
     - typing_extensions >=4.14,<5
@@ -31,20 +33,19 @@ requirements:
     - httpx >=0.23.0,<1
     - pydantic >=1.10.13,<3,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*
     - typing-extensions >=4.11,<5
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - tqdm >4
 
-test:
-  imports:
-    - openai
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - openai
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
-  home: https://beta.openai.com
   summary: Python client library for the OpenAI API
   description: |
     The OpenAI Python library provides convenient access to the OpenAI API
@@ -57,10 +58,10 @@ about:
     makes it easy to interact with the API from your terminal.
     Run `openai api -h` for usage.
   license: MIT
-  license_family: MIT
   license_file: LICENSE
-  doc_url: https://platform.openai.com/docs/api-reference?lang=python
-  dev_url: https://github.com/openai/openai-python
+  homepage: https://beta.openai.com
+  repository: https://github.com/openai/openai-python
+  documentation: https://platform.openai.com/docs/api-reference?lang=python
 
 extra:
   recipe-maintainers:

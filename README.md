@@ -3,7 +3,7 @@ About openai-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openai-feedstock/blob/main/LICENSE.txt)
 
-Home: https://beta.openai.com
+Home: https://beta.openai.com/
 
 Package license: MIT
 
@@ -22,7 +22,6 @@ a wide range of versions of the OpenAI API.
 This library additionally provides an `openai` command-line utility which
 makes it easy to interact with the API from your terminal.
 Run `openai api -h` for usage.
-
 
 Current build status
 ====================
