@@ -22,7 +22,7 @@ requirements:
     - hatchling
     - hatch-fancy-pypi-readme
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
   run:
     - httpx2 >=2.7.0,<3
     - typing_extensions >=4.14,<5
