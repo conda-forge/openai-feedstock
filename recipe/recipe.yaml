@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: openai
-  version: "3.16.2"
+  version: 3.17.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 9dd6e3d1d075477a6bffe7cc86f8081cff087266ccd0a3dde6b63583961fd3d5
+  sha256: 35e9c10ee1e7987cbb42438ac91be12eddeeabd22e6af87f142a82fc149ba614
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - httpx2 >=2.7.0,<3
+    - httpx2 >=2.12.0,<3
     - typing_extensions >=4.14,<5
     - jiter >=0.16.0,<1
     - sniffio
