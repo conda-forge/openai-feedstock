@@ -15,12 +15,11 @@ source:
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - hatchling
-    - hatch-fancy-pypi-readme
+    - hatchling ==1.32.4
     - pip
     - python ${{ python_min }}.*
   run:
@@ -52,8 +51,10 @@ about:
     This library additionally provides an `openai` command-line utility which
     makes it easy to interact with the API from your terminal.
     Run `openai api -h` for usage.
-  license: MIT
-  license_file: LICENSE
+  license: Apache-2.0 AND BSD-3-Clause
+  license_file:
+    - LICENSE
+    - src/openai/_vendor/httpx_aiohttp/LICENSE
   homepage: https://beta.openai.com
   repository: https://github.com/openai/openai-python
   documentation: https://platform.openai.com/docs/api-reference?lang=python
