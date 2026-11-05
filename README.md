@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openai-feedstoc
 
 Home: https://beta.openai.com/
 
-Package license: MIT
+Package license: Apache-2.0 AND BSD-3-Clause
 
 Summary: Python client library for the OpenAI API
 
