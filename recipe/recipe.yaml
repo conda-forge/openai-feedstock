@@ -48,7 +48,7 @@ tests:
       - python -c "import openai; assert openai.__version__ == '${{ version }}'; c = openai.OpenAI(api_key='test-key'); assert c.responses is not None; c.close()"
     requirements:
       run:
-        - ${{ python_min }}.*
+        - python ${{ python_min }}.*
 
 about:
   summary: Python client library for the OpenAI API
