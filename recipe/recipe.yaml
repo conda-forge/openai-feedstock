@@ -19,11 +19,12 @@ build:
 
 requirements:
   host:
+    - python ${{ python_min }}.*
     - hatchling ==1.26.3
     - hatch-fancy-pypi-readme
     - pip
-    - python ${{ python_min }}.*
   run:
+    - python >=${{ python_min }}
     - httpx >=0.23.0,<1
     - distro >=1.7.0,<2
     - tqdm >4
@@ -32,7 +33,6 @@ requirements:
     - sniffio
     - anyio >=3.5.0,<5
     - pydantic >=1.9.0,<3
-    - python >=${{ python_min }}
 tests:
   - python:
       imports:
@@ -41,14 +41,14 @@ tests:
         - openai.resources.chat
       pip_check: true
       python_version:
-        - ${{ python_min }}
+        - ${{ python_min }}.*
         - '*'
 
   - script:
       - python -c "import openai; assert openai.__version__ == '${{ version }}'; c = openai.OpenAI(api_key='test-key'); assert c.responses is not None; c.close()"
     requirements:
       run:
-        - python 3.14.*
+        - ${{ python_min }}.*
 
 about:
   summary: Python client library for the OpenAI API
