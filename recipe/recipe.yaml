@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: openai
-  version: "3.57.0"
+  version: "3.58.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/openai/openai-python/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 7f73997718f48dcedcc44b6d5d29264bbaec8468c9587387bfb0aef73d2d0912
+  sha256: 86830897304a6730d1f32437f80171894d14f8935a1b503f29141c7e152c6a16
 
 build:
   number: 0
